@@ -531,10 +531,6 @@
                 }
             }
 
-            &:last-child span {
-                /* width: max-content; */
-            }
-
             span {
                 color: var(--pink);
                 font-size: 1.25rem;
@@ -632,7 +628,7 @@
                 span:last-of-type {
                     color: var(--main-color);
                     font-size: 1.125rem;
-                    translate: 8%;
+                    padding-left: 2.25rem;
                 }
             }
         }
@@ -1108,7 +1104,8 @@
             display: contents;
         }
 
-         .socratesCommercial, .socratesContentContainer {
+        .socratesCommercial,
+        .socratesContentContainer {
             flex-basis: auto;
             width: 90%;
         }
@@ -1116,7 +1113,7 @@
         .socratesCommercial {
             padding-block: 2rem;
         }
-        
+
 
         .headerNavContactContent {
             flex-direction: column;
