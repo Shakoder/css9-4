@@ -17,6 +17,8 @@
         --fw: 600;
     }
 
+    /* CLEANING UP */
+
     ul {
         display: flex;
         list-style: none;
@@ -30,6 +32,30 @@
         border: none;
         outline: none;
     }
+
+    /* SCOLLBAR STYLING */
+
+    ::-webkit-scrollbar {
+        width: .5vw;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--pink);
+        border-radius: .75rem;
+        height: 25vh;
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: .75rem;
+        background-color: var(--light-pink);
+    }
+
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+
+
+    /* START */
 
     html {
         background-color: #0E0E0E;
@@ -1028,6 +1054,7 @@
                 flex-basis: 638px;
                 flex-direction: column;
                 justify-content: flex-end;
+                padding-inline: 1.25em;
 
                 >* {
                     align-self: stretch;
