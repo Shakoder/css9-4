@@ -1,0 +1,1126 @@
+@layer priorMedia, Media;
+
+@layer priorMedia {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Inter, sans-serif;
+    }
+
+    /* VARIABLES*/
+
+    :root {
+        --pink: #DD2590;
+        --light-pink: #FFC4E7;
+        --main-color: #7E7E7E;
+        --fw: 600;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button {
+        border: none;
+        outline: none;
+    }
+
+    html {
+        background-color: #0E0E0E;
+    }
+
+    .comprehensiveContainer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        >* {
+            width: min(100%, 120rem);
+        }
+    }
+
+    body>* {
+        width: min(100%, 1720px);
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+        margin-bottom: 6.5rem;
+    }
+
+    .headerNavMediaContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 4rem;
+        background-color: #f2f2f2;
+    }
+
+    .headerNavMedia {
+        justify-content: space-between;
+        flex-basis: min(90%, 1028px);
+        align-items: center;
+        display: flex;
+
+        span {
+            color: #1c2752;
+            font-size: 1.125rem;
+        }
+
+        ul {
+            gap: 1rem;
+
+            >* {
+                cursor: pointer;
+                transition: scale 400ms ease, translate 400ms ease-out;
+
+                &:hover {
+                    scale: 1.02;
+                    translate: 0 -0.3125rem;
+                }
+            }
+        }
+    }
+
+    .headerNavContact {
+        display: flex;
+        width: min(90%, 64.25rem);
+        justify-content: space-between;
+        gap: 1rem;
+        align-self: center;
+
+        >span {
+            color: #fff;
+            font-family: Mulish, sans-serif;
+            font-weight: calc(var(--fw) + 200);
+            font-size: 2.25rem;
+
+            span {
+                color: var(--pink);
+            }
+        }
+    }
+
+    .headerNavContactContent {
+        display: flex;
+        gap: 4.25rem;
+
+        >* {
+            display: flex;
+            gap: 0.625rem;
+            align-items: center;
+
+            div {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    color: var(--pink);
+                    font-weight: calc(var(--fw) + 100);
+                    font-size: 1.25rem;
+                }
+
+                a {
+                    color: var(--main-color);
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+
+    /* MAIN */
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 6.5rem;
+    }
+
+    .colossus {
+        background-image: url(../images/colossusBG.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-basis: 825px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 3.5rem;
+    }
+
+    [alt="colossus picture"] {
+        display: none;
+    }
+
+    .colossusContentContainer {
+        flex-basis: min(90%, 64.25rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        div {
+            background-color: rgba(255, 255, 255, 0.20);
+            padding: .5em 1em;
+            display: flex;
+            gap: .625rem;
+            align-items: center;
+
+            span {
+                color: #fff;
+                font-size: 1.125rem;
+                font-weight: calc(var(--fw) - 100);
+            }
+        }
+
+        h1 {
+            max-width: 580px;
+            color: #fff;
+            font-weight: calc(var(--fw) + 200);
+            margin-top: 1.3125rem;
+            margin-bottom: 2rem;
+            font-size: clamp(24px, 8vw, 60px);
+        }
+
+        button {
+            background-color: var(--pink);
+            padding: 1.25rem 2.0625rem 1.3125rem;
+            color: #fff;
+            font-weight: var(--fw);
+            font-size: 1.25rem;
+            cursor: pointer;
+            border: none;
+            transition:
+                border-radius 400ms ease,
+                opacity 400ms linear,
+                box-shadow 400ms ease-out, color 400ms ease;
+
+            &:is(:hover, :focus) {
+                color: #cacaca;
+                border-radius: 1em;
+                opacity: .8;
+                box-shadow: inset 5px 5px 20px #000;
+            }
+        }
+    }
+
+    .saturnHeadContainer {
+        display: flex;
+        gap: 3.75rem;
+        align-self: center;
+        width: min(90%, 64.25rem);
+    }
+
+    img[alt="medium sized saturn headed woman"] {
+        display: none;
+    }
+
+    .saturnHeadContentContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        >div:first-of-type {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            padding: .5rem 1em;
+            background-color: var(--light-pink);
+            font-size: 1.125rem;
+            font-weight: calc(var(--fw) - 100);
+
+            span {
+                color: var(--pink);
+            }
+        }
+
+        h2 {
+            max-width: 22.5rem;
+            color: var(--pink);
+            font-weight: calc(var(--fw) + 200);
+            font-size: clamp(24px, 8vw, 45px);
+            margin-top: .625rem;
+            margin-bottom: 1.25rem;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+
+            &:last-of-type {
+                margin-top: 1.25rem;
+                margin-bottom: 2.375rem;
+            }
+        }
+
+        >div:last-of-type {
+            display: flex;
+            gap: 2.5rem;
+
+            >:first-child {
+                background-color: var(--light-pink);
+                flex-basis: 175px;
+                place-items: center;
+                place-content: center;
+                color: var(--pink);
+                font-family: Mulish, sans-serif;
+
+                span {
+                    display: block;
+                }
+
+                span:first-of-type {
+                    font-weight: calc(var(--fw) + 300);
+                    font-size: 4rem;
+                    margin-bottom: 1.25rem;
+                    letter-spacing: .25rem;
+                }
+
+                span:last-of-type {
+                    max-width: 108px;
+                    text-align: center;
+                    font-weight: calc(var(--fw) + 200);
+                }
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 1rem;
+                color: #fff;
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    .socratesContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--pink);
+        flex-basis: 1019px;
+    }
+
+    .socratesContentContainer {
+        flex-basis: min(90%, 64.25rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @scope (&) to (.socratesContent) {
+            * {
+                color: #fff;
+            }
+        }
+
+        h2 {
+            font-size: clamp(24px, 3.125vw, 45px);
+            font-weight: calc(var(--fw) + 200);
+            margin-bottom: 1.125rem;
+        }
+
+        >p {
+            font-size: 1.125rem;
+            text-align: center;
+            max-width: 660px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .socratesButtons {
+        display: flex;
+        gap: 1.875rem;
+        align-self: stretch;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+
+        >* {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-basis: 221px;
+            gap: 7px;
+            padding-block: 1em;
+            cursor: pointer;
+            transition:
+                border-radius 400ms ease,
+                opacity 400ms linear,
+                box-shadow 400ms ease-out, color 400ms ease;
+
+            &:is(:hover, :focus) {
+                color: #cacaca;
+                border-radius: 1em;
+                opacity: .8;
+                box-shadow: inset 5px 5px 20px #000;
+            }
+
+            span {
+                font-weight: var(--fw);
+                font-size: 1.25rem;
+            }
+
+            &:first-child {
+                background-color: #fff;
+
+                span {
+                    color: #000;
+                }
+
+                ~* {
+                    background-color: inherit;
+                    border: 1px solid #f2f2f2;
+                }
+            }
+        }
+    }
+
+    .socratesContent {
+        flex-basis: 37.25rem;
+        align-self: stretch;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socratesCommercial {
+        flex-basis: min(90%, 56rem);
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .socratesCommercialContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: .625rem;
+            padding: .5rem 1rem;
+            background-color: var(--light-pink);
+            font-size: 1.125rem;
+            font-weight: calc(var(--fw) - 100);
+            color: var(--pink);
+        }
+
+        >span {
+            color: #000;
+            font-family: Mulish, sans-serif;
+            font-weight: calc(var(--fw) + 200);
+            font-size: 2.1875rem;
+            margin-block: 1rem;
+        }
+
+        p {
+            color: var(--main-color);
+            font-size: 1.125rem;
+            align-self: flex-start;
+            text-align: start;
+
+            &:last-of-type {
+                margin-block: 2rem;
+            }
+        }
+
+        button {
+            background-color: var(--pink);
+            padding: 1.125rem 2.125rem;
+            color: #fff;
+            font-weight: var(--fw);
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition:
+                border-radius 400ms ease,
+                opacity 400ms linear,
+                box-shadow 400ms ease-out;
+
+            &:is(:hover, :focus) {
+                border-radius: 1em;
+                opacity: .8;
+                box-shadow: inset 5px 5px 20px #000;
+            }
+        }
+    }
+
+    .servicesContainer {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        width: min(90%, 1028px);
+
+        >div:first-of-type {
+            display: flex;
+            align-items: center;
+            gap: .625rem;
+            background-color: var(--light-pink);
+            padding: .5rem 1rem;
+            font-size: 1.125rem;
+            color: var(--pink);
+            font-weight: calc(var(--fw) - 100);
+        }
+
+        h2 {
+            font-size: clamp(24px, 3.125vw, 45px);
+            font-weight: calc(var(--fw) + 200);
+            margin-top: .625rem;
+            margin-bottom: 1.125rem;
+        }
+
+        @scope (&) to (.servicesCardsContainer) {
+            >:first-child~* {
+                color: #fff;
+            }
+
+            p {
+                max-width: 600px;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .servicesCardsContainer {
+        display: flex;
+        gap: 1.5rem;
+        align-self: stretch;
+
+        >* {
+            flex: 1 1 30%;
+            min-width: 0;
+            opacity: 0.9;
+            background-color: #FFE1F3;
+            padding: 3rem 2.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            cursor: pointer;
+            transition: box-shadow 450ms ease, border-radius 450ms ease, scale 450ms ease;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                backdrop-filter: blur(1.5px);
+                background-color: rgba(0, 0, 0, .1);
+                transition: backdrop-filter 400ms ease, background-color 400ms ease
+            }
+
+            &:hover {
+                box-shadow: inset 5px 5px 50px #000;
+                border-radius: 1em;
+                scale: 1.05;
+
+                &::before {
+                    backdrop-filter: blur(0);
+                    background-color: rgba(0, 0, 0, 0)
+                }
+            }
+
+            &:last-child span {
+                /* width: max-content; */
+            }
+
+            span {
+                color: var(--pink);
+                font-size: 1.25rem;
+                font-weight: calc(var(--fw) + 100);
+                margin-top: 1.25rem;
+                margin-bottom: .75rem;
+            }
+
+            p {
+                color: #000;
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                margin-bottom: 1.875rem;
+                white-space: normal;
+                overflow-wrap: break-word;
+            }
+
+            button {
+                background-color: inherit;
+                cursor: pointer;
+                color: #000;
+                font-weight: var(--fw);
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    .squidward {
+        width: 84%;
+        flex-basis: 706px;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .squidwardContentContainer {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 590px;
+        align-items: flex-start;
+
+        >div:first-of-type {
+            display: flex;
+            align-items: center;
+            gap: .625rem;
+            padding: .5rem 1rem;
+            font-weight: calc(var(--fw) - 100);
+            font-size: 1.125rem;
+            color: var(--pink);
+            background-color: var(--light-pink);
+        }
+
+        h2 {
+            color: var(--pink);
+            font-weight: calc(var(--fw) + 200);
+            font-size: clamp(24px, 3.125vw, 45px);
+            margin-top: .625rem;
+            margin-bottom: 1.25rem;
+        }
+
+        p {
+            color: var(--main-color);
+            list-style: 1.75rem;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            flex-direction: column;
+            gap: .75rem;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: 0.375rem;
+
+                span:first-of-type {
+                    color: #fff;
+                    font-size: 1.25rem;
+                    font-weight: calc(var(--fw) + 100);
+
+                    &::before {
+                        content: '\2713';
+                        margin-right: .75rem;
+                        padding: .375rem;
+                        border-radius: 50%;
+                        color: #fff;
+                        background-color: var(--pink);
+                        font-weight: calc(var(--fw) + 100);
+                        font-size: 1.25rem;
+                    }
+                }
+
+                span:last-of-type {
+                    color: var(--main-color);
+                    font-size: 1.125rem;
+                    translate: 8%;
+                }
+            }
+        }
+    }
+
+    .squidwardBgContainer {
+        background-image: url(../images/squidwardBG.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        flex: 1;
+
+        >div {
+            flex-basis: 80%;
+            /* 72% on tablet, 100% on phone */
+            background: rgba(28, 39, 82, 0.30);
+            backdrop-filter: blur(12.5px);
+            padding: clamp(16px, 3.88vw, 56px);
+            gap: 37px;
+            display: flex;
+            flex-direction: column;
+
+            >* {
+                display: flex;
+
+                span {
+                    color: #fff;
+                    font-family: Mulish, sans-serif;
+
+                    &:first-of-type {
+                        font-size: 1.5625rem;
+                        padding: 1.125rem;
+                        background-color: var(--pink);
+                        font-weight: calc(var(--fw) + 200);
+                        flex-basis: 6rem;
+                        text-align: center;
+                    }
+
+                    &:last-of-type {
+                        font-weight: calc(var(--fw) + 100);
+                        border: 1px solid currentColor;
+                        place-content: center;
+                        width: max-content;
+                        padding-left: 1.375rem;
+                        flex: 1;
+                        font-size: clamp(16px, 1.7vw, 25px);
+                        /* flex-basis: 304px; */
+                    }
+                }
+            }
+        }
+    }
+
+    .reviewsContainer {
+        width: min(90%, 1028px);
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2 {
+            color: var(--pink);
+            font-size: clamp(24px, 2.5vw, 36px);
+            font-weight: var(--fw);
+        }
+
+        >span {
+            font-size: 1.25rem;
+            color: var(--main-color);
+            line-height: 1.875rem;
+            min-width: fit-content;
+            margin-top: 1.25rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .reviews {
+        align-self: stretch;
+        display: flex;
+        gap: 2rem;
+
+        >* {
+            flex: 1;
+            min-height: 30rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 1.25rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &:first-child {
+                background-image: url(../images/blackwomanBG.svg);
+            }
+
+            &:has(+:last-child) {
+                background-image: url(../images/manBG.svg);
+            }
+
+            &:last-child {
+                background-image: url(../images/whitewomanBG.svg);
+            }
+
+            >* {
+                flex-basis: min(90%, 281px);
+                padding: 1.25rem;
+                display: flex;
+                flex-direction: column;
+                border-radius: 1rem;
+                border: 1px solid rgba(255, 255, 255, 0.30);
+                background-color: rgba(255, 255, 255, 0.30);
+                backdrop-filter: blur(12px);
+                color: #fff;
+
+                span:first-of-type {
+                    font-weight: var(--fw);
+                    font-size: 1.875rem;
+                    margin-top: 1rem;
+                    margin-bottom: .5rem;
+                }
+
+                >:has(+:last-child) {
+                    font-size: 1.125rem;
+                    font-weight: var(--fw);
+                    margin-bottom: 1.125rem;
+                }
+
+                span:last-of-type {
+                    font-weight: calc(var(--fw) - 100);
+                }
+            }
+
+            &:has(+:last-child) p {
+                font-weight: var(--fw);
+                font-size: 1.25rem;
+                line-height: 1.875rem;
+                margin-bottom: 1.5rem;
+                max-width: 210px;
+            }
+        }
+    }
+
+    /* FOOTER */
+
+    footer {
+        margin-top: 393px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footerNavContainer {
+        flex-basis: min(90%, 1028px);
+        display: flex;
+        flex-direction: column;
+
+        >span {
+            color: #fff;
+            font-size: 1.125rem;
+            align-self: center;
+        }
+    }
+
+    .footerNavContactContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        /* in advance for responsiveness */
+        margin-bottom: 3.5rem;
+        align-items: center;
+
+        >span {
+            color: #FFF;
+            font-size: 2.1875rem;
+            font-weight: calc(var(--fw) + 200);
+            font-family: Mulish, sans-serif;
+
+            span {
+                color: var(--pink);
+            }
+        }
+    }
+
+    .footerNavContact {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+
+        >* {
+            display: flex;
+            align-items: center;
+            gap: .625rem;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: .125rem;
+
+                span:first-of-type {
+                    color: var(--pink);
+                    font-weight: calc(var(--fw) + 100);
+                    font-size: 1.25rem;
+
+                    +* {
+                        color: var(--main-color);
+                        font-size: 1.125rem;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerNavMediaContainer {
+        display: flex;
+        gap: 2rem;
+        /* change it for the mobile only */
+        border-block: 1px solid #4B557D;
+        padding-block: 2.5625rem;
+        margin-bottom: 1.5rem;
+        justify-content: space-between;
+    }
+
+    .media {
+        display: flex;
+        flex-direction: column;
+        gap: 3.75rem;
+        /* change for mobile */
+        align-items: flex-start;
+
+        p {
+            max-width: 410px;
+            color: #fff;
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+
+        ul {
+            gap: 0.875rem;
+
+            >* {
+                transition: scale 400ms ease, translate 450ms ease-out;
+
+                &:hover {
+                    scale: 1.05;
+                    translate: 0 -7px;
+                }
+            }
+        }
+    }
+
+    .footerMediaListContainer {
+        display: flex;
+        gap: 2.125rem;
+        align-self: flex-start;
+    }
+
+    .footerMediaListLeft {
+        padding-inline: 2.125rem;
+        border-inline: 1px solid #4B557D;
+        display: flex;
+        gap: 2.125rem;
+    }
+
+    .footerMediaList {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        span {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: calc(var(--fw) + 100);
+        }
+
+        ul {
+            flex-direction: column;
+            align-items: flex-start;
+
+            &:has(>*:hover)>*:not(:hover) {
+                opacity: 0.2;
+                scale: 0.9;
+            }
+
+            >* {
+                transition: opacity 450ms linear, scale 400ms ease-out;
+
+                &:has(~*) {
+                    padding-bottom: .875rem;
+                    /* padding instead of gap so the animation doesnt appear glitchy */
+                }
+            }
+
+            a {
+                color: #fff;
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+
+@layer Media {
+    @media (1024px >=width >=768px) {
+        .headerNavContact {
+            width: 71%;
+        }
+
+        .headerNavMedia {
+            flex-basis: 71%;
+        }
+
+        img[alt="saturn headed woman picture"] {
+            display: none;
+        }
+
+        img[alt="medium sized saturn headed woman"] {
+            display: block;
+        }
+    }
+
+    @media (width <=1024px) {
+        .headerNavMedia ul {
+            display: none;
+        }
+
+        header {
+            margin-bottom: 2rem;
+        }
+
+        main {
+            gap: 4rem;
+        }
+
+        footer {
+            margin-top: 303px;
+        }
+
+        .headerNavContact {
+            flex-direction: column;
+        }
+
+        .saturnHeadContentContainer>div:last-of-type {
+            flex-direction: column;
+            align-self: stretch;
+        }
+
+        .socratesContainer {
+            width: 90%;
+            align-self: center;
+        }
+
+        .socratesButtons {
+            flex-direction: column;
+
+            button {
+                flex-basis: auto;
+            }
+        }
+
+        .socratesContainer {
+            padding-block: 5.25rem;
+        }
+
+        .socratesCommercial {
+            flex-direction: column;
+            padding-block: 4rem;
+
+            img {
+                align-self: stretch;
+            }
+        }
+
+        .squidward {
+            flex-direction: column;
+            width: 90%;
+            align-self: center;
+        }
+
+        .squidwardContentContainer {
+            flex-basis: auto;
+        }
+
+        .squidwardBgContainer {
+            background-image: url(../images/tabletsquidward.svg);
+            background-size: cover;
+            flex-basis: 648px;
+        }
+
+        .reviews {
+            flex-direction: column;
+
+            >* {
+                flex-basis: 638px;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                >* {
+                    align-self: stretch;
+                    flex-basis: auto;
+                }
+            }
+        }
+
+        .footerNavContactContainer {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footerMediaListLeft {
+            display: contents;
+        }
+
+        .footerNavMediaContainer {
+            flex-direction: column;
+            border: none;
+            padding: 0;
+        }
+
+        .footerMediaListContainer {
+            justify-content: space-between;
+            align-self: stretch;
+        }
+    }
+
+
+    @media (width <=768px) {
+        * {
+            pointer-events: none;
+        }
+
+        main {
+            gap: 2rem;
+        }
+
+        footer {
+            margin-top: 5.875rem;
+        }
+
+        .colossus {
+            display: contents;
+        }
+
+        .colossusContentContainer {
+            width: 90%;
+            align-self: center;
+        }
+
+        img[alt="colossus picture"] {
+            display: block;
+            align-self: center;
+            width: 90%;
+            flex-basis: 430px;
+        }
+
+        .saturnHeadContainer {
+            flex-direction: column;
+        }
+
+        .servicesCardsContainer {
+            flex-direction: column;
+        }
+
+        .footerNavContact {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footerMediaListContainer {
+            display: contents;
+        }
+
+         .socratesCommercial, .socratesContentContainer {
+            flex-basis: auto;
+            width: 90%;
+        }
+
+        .socratesCommercial {
+            padding-block: 2rem;
+        }
+        
+
+        .headerNavContactContent {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+}
